@@ -1,0 +1,536 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #0a0a0a;
+    background-image:
+        radial-gradient(#1a1a1a 1px, transparent 1px),
+        radial-gradient(#1a1a1a 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+    position: relative;
+    font-family: 'League Spartan', sans-serif;
+}
+
+/* Red gradient overlay */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255, 0, 0, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.main-nav {
+    background: rgba(15, 15, 15, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    color: white;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.nav-logo {
+    flex: 0 0 auto;
+}
+
+.logo {
+    height: 50px;
+    width: 120px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    transition: all;
+}
+
+.nav-links :hover {
+    color: red
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 17.6px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.main-content {
+    margin-top: 80px;
+    padding: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding: 40px 0;
+}
+
+.hero-banner {
+    flex: 0 0 40%;
+    margin: 0;
+}
+
+.hero-image {
+    width: 350px;
+    height: 350px;
+    margin-left: 50px;
+    margin-top: 20px;
+    border-radius: 40px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.feat {
+    color: #ffffff;
+    margin: 0 0 15px 0;
+}
+
+h2.feat {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hero-item {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    gap: 8px;
+}
+
+/* Services Section */
+.services {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.section-desc {
+    color: #ffffff;
+    margin-bottom: 40px;
+    opacity: 0.8;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 10px;
+}
+
+.service-card {
+    background: #d3d3d3;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: left;
+    padding-bottom: 30px;
+    width: 464.578px;
+    flex-shrink: 0;
+}
+
+#ser1 {
+    margin-left: 90px;
+    margin-right: 0px;
+}
+
+#ser2 {
+    margin-left: -250px;
+    gap: 0px;
+}
+
+#ser3 {
+    margin-left: 350px;
+}
+
+.service-icon {
+    width: auto;
+    height: 220px;
+    border-radius: 8px;
+    margin: 0px 0px 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 21px;
+    color: #333;
+}
+
+.service-card p {
+    color: #666;
+    line-height: 1.6;
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .services-container {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+
+    .service-card {
+        margin-bottom: 20px;
+    }
+}
+
+
+.hero-item img {
+    flex-shrink: 0;
+
+}
+
+.discord-btn {
+    height: 45px;
+    width: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff000031;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.discord-btn:hover {
+    background-color: #ff00006e;
+}
+
+#join {
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 19px;
+    font-weight: 500;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-list {
+        align-items: center;
+    }
+}
+
+.space {
+    height: 140px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#About p {
+    color: white;
+    text-align: none;
+}
+
+.card-text {
+    line-height: 1.8;
+    margin-block-end: 15px;
+}
+
+.logos {
+    width: 100px;
+    height: auto;
+    transition: width 0.5s ease-in-out
+}
+
+.logos:hover {
+    width: 200px;
+}
+
+.skills {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    min-width: 150px;
+    height: 150px;
+
+}
+
+* {
+    color: white;
+}
+
+h1,
+h2,
+h3 {
+    color: white;
+}
+#state-title{
+    text-align: center;
+    margin-top: -75px;
+}
+
+.about-list {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+#About {
+    text-align: center;
+}
+
+#web,
+#edit {
+    margin-bottom: 10px;
+}
+
+.item-icon {
+    width: 26px;
+    height: 26px;
+}
+
+#eventlink {
+    color: red;
+    text-decoration-style: uppercase;
+}
+
+.features .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 25px;
+}
+
+.features-content {
+    margin-block-end: 0;
+}
+
+.features-item {
+    padding: 20px;
+}
+
+.features-box {
+    transition-property: unset;
+}
+
+.features-box :hover {
+    color: #ffffff;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px rgba(255, 0, 0, 0.7),
+        0 0 82px rgba(255, 0, 0, 0.7),
+        0 0 92px rgba(255, 0, 0, 0.7),
+        0 0 102px rgba(255, 0, 0, 0.7),
+        0 0 151px rgba(255, 0, 0, 0.7);
+
+}
+
+.features-item:not(:last-child) {
+    margin-block-end: 20px;
+}
+
+.features-item .item-title {
+    --fs-5: 2.4rem;
+}
+
+.features .container {
+    grid-template-columns: 1fr max-content;
+    gap: 70px;
+}
+#chanels-features{
+    margin-top: 25px;
+}
+
+#features {
+    padding-top: 100px;
+    padding: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.features-list {
+    list-style: none;
+}
+
+.stats .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-start;
+}
+
+.stats-banner {
+    margin-block-end: 0;
+}
+
+.stats-list {
+    grid-template-columns: 0.7fr;
+}
+
+.stats-item:nth-child(even) {
+    margin-inline-start: auto;
+}
+
+.stats-item .item-title {
+    font-size: 1.5rem;
+}
+
+.stats-text {
+    font-size: 1.5rem;
+}
+
+.stats-banner {
+    max-width: max-content;
+    margin-inline: auto;
+    aspect-ratio: 1 / 0.78;
+    margin-block-end: 15px;
+    margin-top: 100px;
+}
+
+.stats-list {
+    display: grid;
+    gap: 5px;
+}
+
+.stats-item {
+    position: relative;
+    padding-block: 5px;
+    padding-inline-start: 15px;
+}
+
+.stats-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.w-100 {
+    width: 500px;
+    margin-top: -100px;
+}
+
+.stats-item .item-title .span {
+    color: grey;
+    font-weight: var(--fw-400);
+    display: inline-block;
+    font-size: var(--fs-4);
+}
+
+.stats-item.purple::before {
+    background-color: purple;
+}
+
+.stats-item.red::before {
+    background-color: red;
+}
+
+.stats-item.green::before {
+    background-color: green;
+}
+
+.stats-item.yellow::before {
+    background-color: yellow;
+}
+#intro{
+    text-align: center
+}
+form {
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    width: 300px; 
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input, textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+  }
+  
+  textarea {
+    resize: vertical;
+    height: 100px;
+  }
+  
+  input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #45a049;}
