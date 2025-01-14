@@ -345,7 +345,7 @@ h3 {
 
 #eventlink {
     color: red;
-    -moz-text-decoration-style: uppercase;
+    text-decoration-style: uppercase;
 }
 
 .features .container {
@@ -494,3 +494,43 @@ h3 {
 #intro{
     text-align: center
 }
+form {
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    width: 300px; 
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input, textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+  }
+  
+  textarea {
+    resize: vertical;
+    height: 100px;
+  }
+  
+  input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #45a049;}
