@@ -1,7 +1,6 @@
 body {
     margin: 0;
     padding: 0;
-    min-height: 100vh;
     background-color: #0a0a0a;
     background-image:
         radial-gradient(#1a1a1a 1px, transparent 1px),
@@ -313,12 +312,12 @@ html {
     color: white;
 }
 
-h1,
 h2,
 h3 {
     color: white;
 }
-#state-title{
+
+#state-title {
     text-align: center;
     margin-top: -75px;
 }
@@ -393,7 +392,8 @@ h3 {
     grid-template-columns: 1fr max-content;
     gap: 70px;
 }
-#chanels-features{
+
+#chanels-features {
     margin-top: 25px;
 }
 
@@ -491,50 +491,58 @@ h3 {
 .stats-item.yellow::before {
     background-color: yellow;
 }
-#intro{
+
+#intro {
     text-align: center
 }
-form {
-    background-color: #000000;
-    padding: 20px;
-    border-radius: 8px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    width: 300px; 
-    display: flex;
-    flex-direction: column;
-    
-  }
-  
-  label {
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  input, textarea {
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #000000;
-    border-radius: 4px;
-  }
-  
-  textarea {
-    resize: vertical;
-    height: 100px;
-  }
-  
-  input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    padding: 10px;
-    font-size: 16px;
-  }
-  
-  input[type="submit"]:hover {
-    background-color: #45a049;}
-#review,*{
-    color: #000000;
 
+#lottery-sec {
+    text-align: center;
+    margin-top: 13rem;
+}
+
+#lottery-sec h1 {
+    font-size: 60px;
+}
+
+.lottery-cases input[type="number"] {
+    background: transparent;
+    text-align: center;
+    height: 7rem;
+    width: 7rem;
+    font-size: large;
+    margin: 3px;
+
+}
+
+.lottery-btn {
+    width: 6rem;
+    height: 4rem;
+    margin-left: 7rem;
+    margin-right: 7rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: #0a0a0a;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.back-button {
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+    background: var(--gradient);
+    color: var(--text);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    z-index: 100;
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+}
+
+#res {
+    font-size: medium;
 }
