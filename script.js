@@ -1,23 +1,38 @@
 let timeoutid
 function coord() {
     var name = prompt("username->")
+<<<<<<< HEAD
     while (name==""){name = prompt("username->")}
+=======
+>>>>>>> main
     document.getElementById("name").innerHTML = name
 }
 function verif(x) {
     var choix = document.getElementById(x).value
+<<<<<<< HEAD
     if (choix > 20 || 5 > choix ) {
+=======
+    if (choix > 20 || 5 > choix) {
+>>>>>>> main
         alert("Your number must be between 5 and 20. You entered: " + choix + " (Invalid).")
         document.getElementById(x).value = ""
     }
 }
 function test() {
+<<<<<<< HEAD
     var nb=0
     tab = document.getElementsByName('inp')
     for (let i = 0; i < 6; i++) {
         if (tab[i].value > 5 && tab[i].value < 20) { nb++ }
     }
     return nb==6
+=======
+    tab = document.getElementsByName('inp')
+    for (let i = 0; i < 6; i++) {
+        if (tab[i].value > 5 && tab[i].value < 20) { return true }
+        else { return false }
+    }
+>>>>>>> main
 }
 function lottery() {
     if (test()) {
