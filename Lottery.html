@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lottery</title>
+    <link rel="stylesheet" href="united.css">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;900&display=swap"
+        rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="imgahme/logo.png">
+    <script src="script.js"></script>
+</head>
+
+<body onload="coord()">
+    <a href="index.html#top" class="back-button">← Back</a>
+    <section id="lottery-sec">
+        <h2 id="res"></h2>
+        <h1>Lottery online</h1>
+        <h2>pick a random number mr: <span id="name"></span></h2><br>
+        <div class="lottery-cases">
+            <input type="number" name="inp" id="one" onchange="verif('one')">
+            <input type="number" name="inp" id="two" onchange="verif('two')">
+            <input type="number" name="inp" id="three" onchange="verif('three')">
+            <input type="number" name="inp" id="four" onchange="verif('four')">
+            <input type="number" name="inp" id="five" onchange="verif('five')">
+            <input type="number" name="inp" id="six" onchange="verif('six')">
+        </div><br>
+        <input type="button" value="mix" class="lottery-btn" id="start" onclick="lottery()">
+        <input type="button" value="stop" class="lottery-btn" id="stop" disabled onclick="calc()">
+        <div class="lottery-cases">
+            <input type="number" name="out" disabled>
+            <input type="number" name="out" disabled>
+            <input type="number" name="out" disabled>
+            <input type="number" name="out" disabled>
+            <input type="number" name="out" disabled>
+            <input type="number" name="out" disabled>
+        </div>
+    </section>
+</body>
+
+</html>
