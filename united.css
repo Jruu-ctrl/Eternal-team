@@ -527,22 +527,30 @@ h3 {
     border-radius: 20px;
 }
 
-.back-button {
+#lottery-back-button {
     position: fixed;
     top: 2rem;
     left: 2rem;
-    background: var(--gradient);
-    color: var(--text);
     padding: 1rem 2rem;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
     letter-spacing: 1px;
-    transition: all 0.3s ease;
     z-index: 100;
     box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
 }
 
 #res {
     font-size: medium;
+}
+.lottery-btn-reset{
+    background-color: #0a0a0a;
+    padding: 1rem 2rem;
+    margin-top:1rem ;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 100;
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
 }

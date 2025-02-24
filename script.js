@@ -18,11 +18,6 @@ function test() {
         if (tab[i].value > 5 && tab[i].value < 20) { nb++ }
     }
     return nb==6
-    tab = document.getElementsByName('inp')
-    for (let i = 0; i < 6; i++) {
-        if (tab[i].value > 5 && tab[i].value < 20) { return true }
-        else { return false }
-    }
 }
 function lottery() {
     if (test()) {
@@ -48,12 +43,33 @@ function calc() {
     for (let i = 0; i < 6; i++) {
         if (tab[i].value == ans[i].value) { nb++ }
     }
-    if (nb == 0) { res.innerHTML = "😥sorry😥" }
-    else { res.innerHTML = "🤑congratulation🤑 with: " + nb + " answer" }
+    if (nb == 0) { res.innerHTML = "❌0 answer❌" ;document.body.style.backgroundImage="url(imgahme/nt.jpg)"
+    }
+    else { res.innerHTML = "🤑congratulation🤑 with: " + nb + " answer" ;
+        document.body.style.backgroundImage="url(imgahme/gg.jpg)"
+         }
+    document.body.style.backgroundPosition = "center";
+    document.body.style.backgroundSize = "cover"
 
 }
 function stop() {
     clearTimeout(timeoutid)
     document.getElementById("stop").disabled = true
     document.getElementById("start").disabled = true
+}
+function reset(){
+    var tab = document.getElementsByName('inp')
+    var ans = document.getElementsByName('out')    
+    for(let i = 0;i < 6; i++){
+        tab[i].value=""
+        ans[i].value=""
+    }
+    document.getElementById("start").disabled=false
+    document.getElementById("stop").disabled=true
+    res.innerHTML = ""
+    document.body.style.backgroundImage = "none";
+}
+function user(){
+    reset()
+    coord()
 }
