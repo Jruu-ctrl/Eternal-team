@@ -15,7 +15,7 @@ function test() {
     var nb=0
     tab = document.getElementsByName('inp')
     for (let i = 0; i < 6; i++) {
-        if (tab[i].value => 5 && tab[i].value <= 20) { nb++ }
+        if (tab[i].value > 5 && tab[i].value < 20) { nb++ }
     }
     return nb==6
 }
